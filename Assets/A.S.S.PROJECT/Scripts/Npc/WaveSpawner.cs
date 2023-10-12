@@ -2,12 +2,13 @@ using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
 {
-    public Transform npcPrefab;
+    public Transform[] npcPrefab;
 
     public Transform spawnPoint;
 
-    float timeBetweenWaves = 5f;
-    float countdown = 5f;
+    public int npcNumber = 0;
+    //float timeBetweenWaves = 5f;
+    //float countdown = 5f;
 
     public bool isThereNPC;
 
@@ -17,25 +18,32 @@ public class WaveSpawner : MonoBehaviour
     }
     private void Update()
     {
-        if (!isThereNPC)
-        {
-            //SpawnNPC();
+        //if (!isThereNPC)
+        //{
+        //    //SpawnNPC();
 
-            return;
-            //countdown = timeBetweenWaves;
-        }
+        //    return;
+        //    //countdown = timeBetweenWaves;
+        //}
 
-        //countdown -= Time.deltaTime;
+        ////countdown -= Time.deltaTime;
     }
     public void SpawnNPC()
     {
+        
         //isThereNPC = true;
         if (!isThereNPC)
         {
-            Instantiate(npcPrefab, spawnPoint.position, spawnPoint.rotation);
+           
+            Instantiate(npcPrefab[npcNumber], spawnPoint.position, spawnPoint.rotation);
             Debug.Log("NPC SAPWNING");
             isThereNPC = true;
-
+            npcNumber++;
+            if (npcNumber > npcPrefab.Length-1)
+            {
+                npcNumber = 0;
+            }
+            
         }
 
 
