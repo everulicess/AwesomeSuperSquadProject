@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.4440221, g: 0.49316514, b: 0.5722316, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -155,8 +155,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ef5c34baa7a89438ada8129a086c2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcPrefab: {fileID: 2520448578212934940, guid: 8b1dcc60f8120d34a9bf33899f902f82, type: 3}
+  npcPrefab:
+  - {fileID: 2520448578212934940, guid: 8b1dcc60f8120d34a9bf33899f902f82, type: 3}
+  - {fileID: 7330913612745825035, guid: 5c87b284dccee7f41b0b6834f04c6eb3, type: 3}
   spawnPoint: {fileID: 57051199}
+  npcNumber: 0
   isThereNPC: 0
 --- !u!65 &57051196
 BoxCollider:
