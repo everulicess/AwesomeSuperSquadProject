@@ -7,21 +7,30 @@ public class RequirementsCanvas : MonoBehaviour
 {
     [SerializeField] GameObject exclamationObject;
     [SerializeField] GameObject background;
+    [SerializeField] GameObject requirementList;
     
     // Start is called before the first frame update
     void Start()
     {
-        background.SetActive(false);
+        StartScreen();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     public void OnExclamationClicked()
     {
         exclamationObject.SetActive(false);
         background.SetActive(true);
+        requirementList.SetActive(true);
+    }
+    public void OnGoBackClicked()
+    {
+        StartScreen();
+    }
+
+    private void StartScreen()
+    {
+        exclamationObject.SetActive(true);
+        background.SetActive(false);
+        requirementList.SetActive(false);
     }
 }

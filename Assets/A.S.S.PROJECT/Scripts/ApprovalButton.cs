@@ -22,4 +22,10 @@ public class ApprovalButton : MonoBehaviour
         microchipscanner.hasDecided = true;
         Debug.Log("REJECTED");
     }
+    public void DetainNPC()
+    {
+        GameObject.FindGameObjectWithTag("NPC").GetComponent<NPC>().detained = true;
+        microchipscanner.hasDecided = true;
+        Debug.Log("DETAINED");
+    }
 }
