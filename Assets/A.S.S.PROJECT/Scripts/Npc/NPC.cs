@@ -12,7 +12,10 @@ public class NPC : MonoBehaviour
 
     public bool approved = false;
     public bool denied = false;
+    public bool detained = false;
+
     public bool scanned = false;
+    
     WaveSpawner spawn;
     private void Start()
     {
@@ -27,7 +30,8 @@ public class NPC : MonoBehaviour
         ScanningState,
         WaitingState,
         ApprovedState,
-        RejectedState
+        RejectedState,
+        DetainedState
     }
     private void Update()
     {
@@ -35,29 +39,32 @@ public class NPC : MonoBehaviour
         switch (npcState)
         {
             case NpcState.WalkingState:
-                
+
                 transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
 
                 if (Vector3.Distance(transform.position, target.position) <= 0.2f)
                 {
                     GetNextWayPoint();
                 }
-                if (wavePointIndex >= WayPoints.points.Length - 2)
+                if (wavePointIndex >= WayPoints.points.Length - 3)
                 {
                     npcState = NpcState.ScanningState;
                     return;
                 }
-                Debug.Log($"{npcState}");
+                //Debug.Log($"{npcState}");
                 break;
+
             case NpcState.ScanningState:
                 if (scanned)
                 {
                     npcState = NpcState.WaitingState;
                     denied = false;
                     approved = false;
+                    detained = false;
                 }
-                Debug.Log($"{npcState}");
+                //Debug.Log($"{npcState}");
                 break;
+
             case NpcState.WaitingState:
                 if (denied)
                 {
@@ -67,8 +74,13 @@ public class NPC : MonoBehaviour
                 {
                     npcState = NpcState.ApprovedState;
                 }
-                Debug.Log($"{npcState}");
+                if (detained)
+                {
+                    npcState = NpcState.DetainedState;
+                }
+                //Debug.Log($"{npcState}");
                 break;
+
             case NpcState.ApprovedState:
 
                 wavePointIndex = 2;
@@ -76,11 +88,10 @@ public class NPC : MonoBehaviour
                 transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
 
                 Invoke("DestroyPrefab",2);
-                
-                
                
-                Debug.Log($"{npcState}");
+                //Debug.Log($"{npcState}");
                 break;
+
             case NpcState.RejectedState:
 
                 
@@ -91,6 +102,14 @@ public class NPC : MonoBehaviour
 
                 Invoke("DestroyPrefab", 2);
 
+                //Debug.Log($"{npcState}");
+                break;
+            case NpcState.DetainedState:
+
+                wavePointIndex = 4;
+                target = WayPoints.points[wavePointIndex];
+                transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+                Invoke("DestroyPrefab", 2);
                 Debug.Log($"{npcState}");
                 break;
             default:
@@ -105,7 +124,7 @@ public class NPC : MonoBehaviour
     private void DestroyPrefab()
     {
         Destroy(gameObject);
-        if (wavePointIndex >= WayPoints.points.Length - 2 || wavePointIndex >= WayPoints.points.Length - 3)
+        if (wavePointIndex >= WayPoints.points.Length - 3 || wavePointIndex >= WayPoints.points.Length - 4)
         {
             spawn.isThereNPC = false;
             spawn.SpawnNPC();
@@ -115,7 +134,7 @@ public class NPC : MonoBehaviour
 
     public void GetNextWayPoint()
     {
-        if (wavePointIndex >= WayPoints.points.Length - 1)
+        if (wavePointIndex >= WayPoints.points.Length - 3)
         {
             Destroy(gameObject);
             return;

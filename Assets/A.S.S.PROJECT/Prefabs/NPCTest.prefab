@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 2762933224335113610}
   - component: {fileID: 6023356339543863984}
   - component: {fileID: 6644743220391815957}
+  - component: {fileID: 1322513576043012977}
   m_Layer: 0
   m_Name: NPCTest
   m_TagString: NPC
@@ -168,7 +169,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5727521783464023859}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c44f4d0def8b28a40858b316bf55b980, type: 3}
   m_Name: 
@@ -176,6 +177,7 @@ MonoBehaviour:
   speed: 4
   approved: 0
   denied: 0
+  detained: 0
   scanned: 0
 --- !u!114 &6644743220391815957
 MonoBehaviour:
@@ -204,3 +206,19 @@ MonoBehaviour:
     idNumber: ssss
     nationality: aaaa
     antivirus: sasasa
+--- !u!114 &1322513576043012977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5727521783464023859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e03eb75a13cef45955512c08a58914, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  approved: 0
+  rejected: 0
+  detained: 0
+  scanned: 0

@@ -11,9 +11,14 @@ public class ActivateTeleportationRay : MonoBehaviour
     [SerializeField] InputActionProperty rightActivate;
 
     [SerializeField] InputActionProperty rightCancel;
+
+    [SerializeField] GameObject rightGrabRay;
+    [SerializeField] XRDirectInteractor rightDirectGrab;
     // Update is called once per frame
     void Update()
     {
         rightTeleportation.SetActive(rightCancel.action.ReadValue<float>() == 0 && rightActivate.action.ReadValue<float>() > 0.1f);
+
+        rightGrabRay.SetActive(rightDirectGrab.interactablesSelected.Count == 0);
     }
 }
