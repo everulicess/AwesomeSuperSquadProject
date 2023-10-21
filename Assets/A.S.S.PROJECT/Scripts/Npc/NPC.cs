@@ -39,7 +39,7 @@ public class NPC : MonoBehaviour
         switch (npcState)
         {
             case NpcState.WalkingState:
-                
+
                 transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
 
                 if (Vector3.Distance(transform.position, target.position) <= 0.2f)
@@ -51,7 +51,7 @@ public class NPC : MonoBehaviour
                     npcState = NpcState.ScanningState;
                     return;
                 }
-                Debug.Log($"{npcState}");
+                //Debug.Log($"{npcState}");
                 break;
 
             case NpcState.ScanningState:
@@ -60,8 +60,9 @@ public class NPC : MonoBehaviour
                     npcState = NpcState.WaitingState;
                     denied = false;
                     approved = false;
+                    detained = false;
                 }
-                Debug.Log($"{npcState}");
+                //Debug.Log($"{npcState}");
                 break;
 
             case NpcState.WaitingState:
@@ -77,7 +78,7 @@ public class NPC : MonoBehaviour
                 {
                     npcState = NpcState.DetainedState;
                 }
-                Debug.Log($"{npcState}");
+                //Debug.Log($"{npcState}");
                 break;
 
             case NpcState.ApprovedState:
@@ -88,7 +89,7 @@ public class NPC : MonoBehaviour
 
                 Invoke("DestroyPrefab",2);
                
-                Debug.Log($"{npcState}");
+                //Debug.Log($"{npcState}");
                 break;
 
             case NpcState.RejectedState:
@@ -101,7 +102,7 @@ public class NPC : MonoBehaviour
 
                 Invoke("DestroyPrefab", 2);
 
-                Debug.Log($"{npcState}");
+                //Debug.Log($"{npcState}");
                 break;
             case NpcState.DetainedState:
 
