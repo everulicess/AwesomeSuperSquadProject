@@ -368,7 +368,7 @@ GameObject:
   - component: {fileID: 93938395}
   - component: {fileID: 93938394}
   m_Layer: 0
-  m_Name: wallRightSidewindow (3)
+  m_Name: wallBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2774,7 +2774,7 @@ GameObject:
   - component: {fileID: 429054052}
   - component: {fileID: 429054051}
   m_Layer: 0
-  m_Name: wallRightSidewindow (4)
+  m_Name: wallBottomwindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2879,7 +2879,7 @@ GameObject:
   - component: {fileID: 490637961}
   - component: {fileID: 490637960}
   m_Layer: 0
-  m_Name: wallRightSidewindow (5)
+  m_Name: wallTopwindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3407,7 +3407,7 @@ GameObject:
   - component: {fileID: 607259720}
   - component: {fileID: 607259719}
   m_Layer: 0
-  m_Name: wallRightSidewindow (6)
+  m_Name: Ceiling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3714,7 +3714,7 @@ GameObject:
   - component: {fileID: 703477375}
   - component: {fileID: 703477374}
   m_Layer: 0
-  m_Name: wallRightSidewindow (2)
+  m_Name: wallLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8020,7 +8020,7 @@ GameObject:
   - component: {fileID: 1676006302}
   - component: {fileID: 1676006301}
   m_Layer: 0
-  m_Name: wallRightSidewindow (1)
+  m_Name: wallRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
