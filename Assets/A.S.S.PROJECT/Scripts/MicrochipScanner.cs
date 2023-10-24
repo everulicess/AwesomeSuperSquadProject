@@ -50,7 +50,7 @@ public class MicrochipScanner : MonoBehaviour
             if (hit.collider.tag == "NPC")
             {
                 hasDecided = false;
-                hit.collider.gameObject.GetComponent<NPC>().scanned = true;
+                hit.collider.gameObject.GetComponent<NPCStateMachine>().scanned = true;
                 Debug.Log($"This object named -------------------------- has been scanned");
             }
             if (hit.collider.gameObject.TryGetComponent<NPCInfo>(out NPCInfo scannedNPC))
