@@ -7,12 +7,14 @@ public class StateController<EState> : MonoBehaviour where EState : Enum
     protected Dictionary<EState, State<EState>> States = new Dictionary<EState, State<EState>>();
 
     protected State<EState> currentState;
+    protected State<EState> previousState;
     protected bool isTransitioningState = false;
 
     private void Start()
     {
 
         currentState.EnterState();
+        EState _previousState = previousState.stateKey;
     }
     private void Update()
     {
