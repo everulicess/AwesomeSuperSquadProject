@@ -12,16 +12,19 @@ public class Tutorial : State<GameManager.GameState>
 
     public override void EnterState()
     {
-        
+        Debug.Log(" Tutorial ENTER");
+
     }
 
     public override void ExitState()
     {
-        
+        Debug.Log("Tutorial EXIT");
+
     }
 
     public override GameManager.GameState GetNextState()
     {
+        
         if (gM.tutorialfinished)
         {
             return GameManager.GameState.Day;
@@ -31,6 +34,6 @@ public class Tutorial : State<GameManager.GameState>
 
     public override void UpdateState()
     {
-        throw new System.NotImplementedException();
+        Debug.Log("TUTORIAL");
     }
 }

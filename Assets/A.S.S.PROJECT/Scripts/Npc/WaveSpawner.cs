@@ -36,7 +36,7 @@ public class WaveSpawner : MonoBehaviour
         {
            
             Instantiate(npcPrefab[npcNumber], spawnPoint.position, spawnPoint.rotation);
-            Debug.Log("NPC SAPWNING");
+            //Debug.Log("NPC SAPWNING");
             isThereNPC = true;
             npcNumber++;
             if (npcNumber > npcPrefab.Length-1)

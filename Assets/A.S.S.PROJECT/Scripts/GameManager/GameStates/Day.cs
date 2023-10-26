@@ -5,28 +5,33 @@ using UnityEngine;
 public class Day : State<GameManager.GameState>
 {
     GameManager gM;
-    public Day(GameManager _gM) : base(GameManager.GameState.Tutorial)
+    public Day(GameManager _gM) : base(GameManager.GameState.Day)
     {
         gM = _gM;
     }
 
     public override void EnterState()
     {
-        throw new System.NotImplementedException();
+        Debug.Log("Day ENTER");
     }
 
     public override void ExitState()
     {
-        throw new System.NotImplementedException();
+        
+    }
+    public override void UpdateState()
+    {
+        Debug.Log("DAY");
     }
 
     public override GameManager.GameState GetNextState()
     {
-        throw new System.NotImplementedException();
+        if (gM.endDay)
+        {
+            return GameManager.GameState.EndOfTheDay;
+        }
+        return GameManager.GameState.Day;
     }
 
-    public override void UpdateState()
-    {
-        throw new System.NotImplementedException();
-    }
+    
 }

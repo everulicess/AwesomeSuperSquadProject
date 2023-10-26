@@ -14,7 +14,7 @@ public class StateController<EState> : MonoBehaviour where EState : Enum
     {
 
         currentState.EnterState();
-        EState _previousState = previousState.stateKey;
+        
     }
     private void Update()
     {

@@ -5,19 +5,21 @@ using UnityEngine;
 public class EndOfTheDay : State<GameManager.GameState>
 {
     GameManager gM;
-    public EndOfTheDay(GameManager _gM) : base(GameManager.GameState.Tutorial)
+    public EndOfTheDay(GameManager _gM) : base(GameManager.GameState.EndOfTheDay)
     {
         gM = _gM;
     }
 
     public override void EnterState()
     {
-        
+       
+
     }
 
     public override void ExitState()
     {
         
+
     }
 
     public override GameManager.GameState GetNextState()
@@ -34,6 +36,6 @@ public class EndOfTheDay : State<GameManager.GameState>
 
     public override void UpdateState()
     {
-        
+        Debug.Log("ENDDay EXIT");
     }
 }

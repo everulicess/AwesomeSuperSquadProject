@@ -12,7 +12,7 @@ public class WaitingState : State<NPCStateMachine.NPCState>
 
     public override void EnterState()
     {
-
+        
     }
 
     public override void ExitState()
