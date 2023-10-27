@@ -19,6 +19,7 @@ public class WalkingState : State<NPCStateMachine.NPCState>
     }
     public override void UpdateState()
     {
+       
         Debug.Log("WALKING STATE");
         Vector3 dir = npc.target.position - npc.transform.position;
         npc.transform.Translate(dir.normalized * npc.speed * Time.deltaTime, Space.World);
@@ -31,7 +32,7 @@ public class WalkingState : State<NPCStateMachine.NPCState>
     }
     public override void ExitState()
     {
-        return;
+        
     }
 
     public override NPCStateMachine.NPCState GetNextState()

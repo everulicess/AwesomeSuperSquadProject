@@ -5,18 +5,32 @@ using System;
 
 public class NPCStateMachine : StateController<NPCStateMachine.NPCState>
 {
+    //
+    public bool scanned = false;
 
+    //Decisions
     public bool approved = false;
     public bool rejected = false;
     public bool detained = false;
-    public bool scanned = false;
 
+    public bool firstChoice = true;
+    
+    //Special NPCs
+    public bool specialNPC = false;
+    public bool virusNPC = false;
+
+    //Supervisor takeOver
+    public bool supervisor = false;
+
+    //type of info
+    public bool incorrectInfo = false;
+
+    //Movement
     public Transform target;
     public int wavePointIndex = 0;
-     
-
     public float speed = 4f;
 
+    //Spawner
     public WaveSpawner spawn;
     public enum NPCState
     {

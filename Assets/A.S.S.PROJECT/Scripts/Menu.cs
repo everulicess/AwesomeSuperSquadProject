@@ -24,9 +24,6 @@ public class Menu : MonoBehaviour
             menu.SetActive(!menu.activeSelf);
 
             gM.isMenu = menu.activeSelf;
-
-            
-
         }
         menu.transform.position = head.position + new Vector3(head.forward.x, 0f, head.forward.z).normalized * spawnDistance;
 

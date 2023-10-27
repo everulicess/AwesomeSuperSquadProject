@@ -10,14 +10,19 @@ public class ScanningState : State<NPCStateMachine.NPCState>
         npc = _npc;
     }
 
-    //public bool scanned = false;
+    GameManager gM;
     public override void EnterState()
     {
-
+        gM = GameObject.FindObjectOfType<GameManager>();
     }
 
     public override void ExitState()
     {
+        Debug.Log("Scan Exit State");
+        if (!gM.firstScan)
+        {
+            gM.firstScan = true;
+        }
 
     }
 

@@ -12,7 +12,34 @@ public class RejectedState : State<NPCStateMachine.NPCState>
 
     public override void EnterState()
     {
+        if (npc.incorrectInfo)
+        {
+            if (npc.virusNPC)
+            {
+                //lose points for not detaining
+                Debug.Log("Rejected Losing Points-----------Virus");
+                npc.firstChoice = false;
 
+            }
+            else
+            {
+                //gain Points
+            }
+
+        }
+        else
+        {
+            // lose points because npc has correct data
+
+            if (npc.virusNPC)
+            {
+                //lose points for not detaining
+                Debug.Log("Rejected Losing Points-----------Virus");
+                npc.firstChoice = false;
+
+            }
+        }
+        
     }
 
     public override void ExitState()
@@ -22,18 +49,27 @@ public class RejectedState : State<NPCStateMachine.NPCState>
 
     public override NPCStateMachine.NPCState GetNextState()
     {
+        //get detained
+        if (npc.virusNPC)
+        {
+            return NPCStateMachine.NPCState.Detained;
+        }
         return NPCStateMachine.NPCState.Rejected;
     }
 
     public override void UpdateState()
     {
-        Debug.Log("REJECTED STATE");
-        Vector3 dir = npc.target.position - npc.transform.position;
+        if (!npc.virusNPC)
+        {
+            Debug.Log("REJECTED STATE");
+            Vector3 dir = npc.target.position - npc.transform.position;
 
-        npc.wavePointIndex = 3;
-        npc.target = WayPoints.points[npc.wavePointIndex];
-        npc.transform.Translate(dir.normalized * npc.speed * Time.deltaTime, Space.World);
-        npc.DestroyPrefab();
+            npc.wavePointIndex = 3;
+            npc.target = WayPoints.points[npc.wavePointIndex];
+            npc.transform.Translate(dir.normalized * npc.speed * Time.deltaTime, Space.World);
+            npc.DestroyPrefab();
+        }
+        
 
     }
 }

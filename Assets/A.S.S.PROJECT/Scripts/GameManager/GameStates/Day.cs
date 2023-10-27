@@ -21,6 +21,7 @@ public class Day : State<GameManager.GameState>
     }
     public override void UpdateState()
     {
+        gM.MenuHandle();
         Debug.Log("DAY");
     }
 

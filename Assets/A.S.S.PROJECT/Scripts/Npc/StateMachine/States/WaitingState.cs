@@ -39,6 +39,10 @@ public class WaitingState : State<NPCStateMachine.NPCState>
 
     public override void UpdateState()
     {
-        Debug.Log("WAITING STATE");
+        if (npc.specialNPC)
+        {
+            Debug.Log("WAITING STATE SPECIAL");
+        }
+        
     }
 }

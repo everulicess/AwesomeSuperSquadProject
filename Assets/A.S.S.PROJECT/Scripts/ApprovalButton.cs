@@ -6,20 +6,24 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class ApprovalButton : MonoBehaviour
 {
     MicrochipScanner microchipscanner;
+    GameManager gM;
     private void Awake()
     {
         microchipscanner = GameObject.FindAnyObjectByType<MicrochipScanner>();
+        gM = GameObject.FindObjectOfType<GameManager>();
     }
     public void AcceptNPC()
     {
         GameObject.FindGameObjectWithTag("NPC").GetComponent<NPCStateMachine>().approved = true;
         microchipscanner.hasDecided = true;
+        gM.decisionMade = true;
         Debug.Log("ACCEPTED");
     }
     public void RejectNPC()
     {
         GameObject.FindGameObjectWithTag("NPC").GetComponent<NPCStateMachine>().rejected = true;
         microchipscanner.hasDecided = true;
+        gM.decisionMade = true;
         Debug.Log("REJECTED");
     }
     public void DetainNPC()

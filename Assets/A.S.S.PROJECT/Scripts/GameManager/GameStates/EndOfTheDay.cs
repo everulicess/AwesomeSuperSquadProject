@@ -36,6 +36,7 @@ public class EndOfTheDay : State<GameManager.GameState>
 
     public override void UpdateState()
     {
+        gM.MenuHandle();
         Debug.Log("ENDDay EXIT");
     }
 }

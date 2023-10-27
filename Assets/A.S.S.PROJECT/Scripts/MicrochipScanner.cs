@@ -15,12 +15,16 @@ public class MicrochipScanner : MonoBehaviour
 
     public bool hasDecided = false;
 
+
+    GameManager gM;
     // Start is called before the first frame update
     void Start()
     {
         XRGrabInteractable grabbable = GetComponent<XRGrabInteractable>();
 
         grabbable.activated.AddListener(ScanMicrochip);
+
+        gM = GameObject.FindObjectOfType<GameManager>();
     }
     private void Update()
     {
@@ -62,9 +66,19 @@ public class MicrochipScanner : MonoBehaviour
                 
             }
         }
-        
 
         //idText.text = $"{hit.collider.gameObject.name}";
         //visaText.text = $"{hit.collider.gameObject.name} Has a specific visa";
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "Right Controller"||other.gameObject.name == "Left Controller")
+        {
+            gM.scannerpicked = true;
+            Debug.Log($"{other.gameObject.name}----------------------------------------------------------");
+           
+        }
+        
     }
 }

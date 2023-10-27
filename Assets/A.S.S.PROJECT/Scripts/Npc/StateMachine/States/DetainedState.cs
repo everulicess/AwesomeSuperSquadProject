@@ -12,7 +12,13 @@ public class DetainedState : State<NPCStateMachine.NPCState>
 
     public override void EnterState()
     {
+        if (npc.virusNPC && npc.firstChoice)
+        {
+            //gain Points
 
+            Debug.Log("Gaining Points-----------Virus Detained");
+
+        }
     }
 
     public override void ExitState()
