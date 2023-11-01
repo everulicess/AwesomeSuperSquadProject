@@ -1841,7 +1841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a00b6f0486d15447afac3d5f72aa792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trustBar: {fileID: 0}
+  trustBar: {fileID: 2085795625}
   trustAmount: 100
 --- !u!1 &333856686
 GameObject:
@@ -5926,7 +5926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a00b6f0486d15447afac3d5f72aa792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trustBar: {fileID: 0}
+  trustBar: {fileID: 2085795625}
   trustAmount: 100
 --- !u!1 &871282118
 GameObject:
@@ -9849,7 +9849,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a00b6f0486d15447afac3d5f72aa792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trustBar: {fileID: 0}
+  trustBar: {fileID: 2085795625}
   trustAmount: 100
 --- !u!1 &1541728677
 GameObject:
@@ -12943,7 +12943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99551fe82392c2d429bb4381a5e2f38b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trustbar: {fileID: 0}
+  trustbar: {fileID: 2085795625}
 --- !u!222 &2085795627
 CanvasRenderer:
   m_ObjectHideFlags: 0

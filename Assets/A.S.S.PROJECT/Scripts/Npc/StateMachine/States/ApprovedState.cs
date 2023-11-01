@@ -5,6 +5,7 @@ using UnityEngine;
 public class ApprovedState : State<NPCStateMachine.NPCState>
 {
     NPCStateMachine npc;
+    TrustManager trustManager;
     public ApprovedState(NPCStateMachine _npc) : base(NPCStateMachine.NPCState.Approved)
     {
         npc = _npc;
@@ -12,13 +13,13 @@ public class ApprovedState : State<NPCStateMachine.NPCState>
 
     public override void EnterState()
     {
-
+        trustManager = GameObject.FindObjectOfType<TrustManager>();
         if (npc.incorrectInfo)
         {
-            // lose points for incorrect info
+            trustManager.LoseTrust(20f);
             if (npc.virusNPC)
             {
-                //lose more points for virus
+                trustManager.LoseTrust(50f);
 
                 Debug.Log("Approved Losing More Points-----------Virus");
 
@@ -29,7 +30,7 @@ public class ApprovedState : State<NPCStateMachine.NPCState>
         {
             if (npc.virusNPC)
             {
-                //lose more points for virus
+                trustManager.LoseTrust(30);
 
                 Debug.Log("Approved Losing More Points-----------Virus");
                 npc.firstChoice = false;
@@ -37,7 +38,7 @@ public class ApprovedState : State<NPCStateMachine.NPCState>
             }
             else
             {
-                //gain points for correct info
+                trustManager.GainTrust(50);
             }
         }
     }
