@@ -19,36 +19,25 @@ public class ApprovedState : State<NPCStateMachine.NPCState>
             trustManager.LoseTrust(20f);
             if (npc.virusNPC)
             {
-                trustManager.LoseTrust(50f);
-                Debug.Log(trustManager.trustAmount);
-
-                Debug.Log("Approved Losing More Points-----------Virus");
-
-                npc.firstChoice = false;
+                acceptedIncorrectVirusNPC();
             }
         }
         else
         {
             if (npc.virusNPC)
             {
-                trustManager.LoseTrust(30);
-                Debug.Log(trustManager.trustAmount);
-
-                Debug.Log("Approved Losing More Points-----------Virus");
-                npc.firstChoice = false;
-
+                acceptedCorrectVirusNPC();
             }
             else
             {
-                trustManager.GainTrust(50);
-                Debug.Log(trustManager.trustAmount);
+                acceptedCorrectNonVirusNPC();
             }
         }
     }
 
     public override void ExitState()
     {
-        
+        Debug.Log("ApprovedState Exit");
     }
 
     public override NPCStateMachine.NPCState GetNextState()
@@ -73,9 +62,35 @@ public class ApprovedState : State<NPCStateMachine.NPCState>
             npc.transform.Translate(dir.normalized * npc.speed * Time.deltaTime, Space.World);
             npc.DestroyPrefab();
         }
-        
+
         //Invoke("DestroyPrefab", 2);
 
     }
-   
+
+    public void acceptedIncorrectVirusNPC()
+    {
+        trustManager.LoseTrust(50f);
+        Debug.Log(trustManager.trustAmount);
+
+        Debug.Log("Approved Losing More Points-----------Virus");
+
+        npc.firstChoice = false;
+    }
+
+    public void acceptedCorrectVirusNPC()
+    {
+        trustManager.LoseTrust(30f);
+        Debug.Log(trustManager.trustAmount);
+
+        Debug.Log("Approved Losing More Points-----------Virus");
+        npc.firstChoice = false;
+    }
+
+    public void acceptedCorrectNonVirusNPC()
+    {
+        trustManager.GainTrust(50f);
+        Debug.Log(trustManager.trustAmount);
+    }
+
+
 }

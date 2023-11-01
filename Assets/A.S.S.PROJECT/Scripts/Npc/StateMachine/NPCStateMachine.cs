@@ -56,19 +56,30 @@ public class NPCStateMachine : StateController<NPCStateMachine.NPCState>
 
         currentState = States[NPCState.WalkingState];
     }
+
+    private void OnDestroy()
+    {
+        spawn.isThereNPC = false;
+        spawn.SpawnNPC();
+        
+        Debug.Log("obdestroy is called");
+    }
     public void DestroyPrefab()
     {
-        Invoke("CheckForDestroy",2);
-        
+        Debug.Log("Destroyprefab");
+        Invoke("CheckForDestroy", 2);
+
     }
     private void CheckForDestroy()
     {
-        Destroy(gameObject);
+        Debug.Log("checkfordestroy");
+
         if (wavePointIndex >= WayPoints.points.Length - 2 || wavePointIndex >= WayPoints.points.Length - 4)
         {
-            spawn.isThereNPC = false;
-            spawn.SpawnNPC();
-            return;
+
+            //spawn.SpawnNPC();
+            Destroy(gameObject);
+
         }
     }
 }

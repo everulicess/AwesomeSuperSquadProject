@@ -5,10 +5,5 @@ using UnityEngine.UI;
 
 public class TrustBar : MonoBehaviour
 {
-    public Image trustbar;
 
-    public void UpdateHealth(float fraction)
-    {
-        trustbar.fillAmount = fraction;
-    }
 }

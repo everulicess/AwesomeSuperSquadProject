@@ -231,10 +231,10 @@ MonoBehaviour:
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 1
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &21661380
@@ -356,9 +356,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcPrefab:
   - {fileID: 7330913612745825035, guid: 5c87b284dccee7f41b0b6834f04c6eb3, type: 3}
+  - {fileID: 7330913612745825035, guid: 3afe0139a1accba4aae8f03ea50ea873, type: 3}
+  - {fileID: 7330913612745825035, guid: 3afe0139a1accba4aae8f03ea50ea873, type: 3}
+  - {fileID: 2520448578212934940, guid: 8b1dcc60f8120d34a9bf33899f902f82, type: 3}
   - {fileID: 2520448578212934940, guid: 8b1dcc60f8120d34a9bf33899f902f82, type: 3}
   - {fileID: 7330913612745825035, guid: ec7e208d734588f4e98512bdc2bfc706, type: 3}
   - {fileID: 7330913612745825035, guid: 3afe0139a1accba4aae8f03ea50ea873, type: 3}
+  - {fileID: 2520448578212934940, guid: 8b1dcc60f8120d34a9bf33899f902f82, type: 3}
+  - {fileID: 2520448578212934940, guid: 8b1dcc60f8120d34a9bf33899f902f82, type: 3}
+  - {fileID: 7330913612745825035, guid: 3afe0139a1accba4aae8f03ea50ea873, type: 3}
+  - {fileID: 2520448578212934940, guid: 8b1dcc60f8120d34a9bf33899f902f82, type: 3}
+  - {fileID: 2520448578212934940, guid: 8b1dcc60f8120d34a9bf33899f902f82, type: 3}
   spawnPoint: {fileID: 57051199}
   npcNumber: 0
   isThereNPC: 0
@@ -12893,7 +12901,6 @@ GameObject:
   - component: {fileID: 2085795628}
   - component: {fileID: 2085795627}
   - component: {fileID: 2085795625}
-  - component: {fileID: 2085795626}
   m_Layer: 5
   m_Name: Healthbar
   m_TagString: Untagged
@@ -12931,19 +12938,6 @@ MonoBehaviour:
   m_FillOrigin: 1
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2085795626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2085795624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99551fe82392c2d429bb4381a5e2f38b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trustbar: {fileID: 2085795625}
 --- !u!222 &2085795627
 CanvasRenderer:
   m_ObjectHideFlags: 0

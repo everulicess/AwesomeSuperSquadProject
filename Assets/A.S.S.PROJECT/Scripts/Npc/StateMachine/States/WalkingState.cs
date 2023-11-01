@@ -12,8 +12,11 @@ public class WalkingState : State<NPCStateMachine.NPCState>
         npc = _npc;
     }
 
+    WaveSpawner spawn;
     public override void EnterState()
     {
+        spawn = GameObject.FindObjectOfType<WaveSpawner>();
+        spawn.isThereNPC = true;
         //target = WayPoints.points[wavePointIndex];
         //Debug.Log("IT'S WORKIIIIIINNGGGGGG");
     }
