@@ -23,20 +23,7 @@ public class TrustManager : MonoBehaviour
             Debug.Log("You lost all of the trust. L");
         }
 
-        if (GameObject.FindGameObjectWithTag("NPC").GetComponent<NPCStateMachine>().approved = true)
-        {
-            LoseTrust(20);
-        }
 
-        if (GameObject.FindGameObjectWithTag("NPC").GetComponent<NPCStateMachine>().rejected = true)
-        {
-            GainTrust(5);
-        }
-
-        if (GameObject.FindGameObjectWithTag("NPC").GetComponent<NPCStateMachine>().detained = true)
-        {
-            GainTrust(20);
-        }
     }
     public void LoseTrust(float trust)
     {

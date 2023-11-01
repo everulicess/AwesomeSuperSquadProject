@@ -20,6 +20,7 @@ public class ApprovedState : State<NPCStateMachine.NPCState>
             if (npc.virusNPC)
             {
                 trustManager.LoseTrust(50f);
+                Debug.Log(trustManager.trustAmount);
 
                 Debug.Log("Approved Losing More Points-----------Virus");
 
@@ -31,6 +32,7 @@ public class ApprovedState : State<NPCStateMachine.NPCState>
             if (npc.virusNPC)
             {
                 trustManager.LoseTrust(30);
+                Debug.Log(trustManager.trustAmount);
 
                 Debug.Log("Approved Losing More Points-----------Virus");
                 npc.firstChoice = false;
@@ -39,6 +41,7 @@ public class ApprovedState : State<NPCStateMachine.NPCState>
             else
             {
                 trustManager.GainTrust(50);
+                Debug.Log(trustManager.trustAmount);
             }
         }
     }
