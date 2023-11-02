@@ -49,4 +49,11 @@ public class TrustManager : MonoBehaviour
         Debug.Log("posTempFLoat variable fill =" + tempFloat);
         UpdateHealth(tempFloat);
     }
+
+    Color ColorFromGradient (float value)
+    {
+        return gradient.Evaluate(value);
+    }
+
+    public Gradient gradient;
 }
