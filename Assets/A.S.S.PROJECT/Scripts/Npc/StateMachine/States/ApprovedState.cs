@@ -66,12 +66,6 @@ public class ApprovedState : State<NPCStateMachine.NPCState>
 
     }
 
-
-
-
-
-
-
     public void acceptedIncorrectVirusNPC()
     {
         trustManager.LoseTrust(50f);
@@ -96,6 +90,4 @@ public class ApprovedState : State<NPCStateMachine.NPCState>
         trustManager.GainTrust(50f);
         Debug.Log(trustManager.trustAmount);
     }
-
-
 }
