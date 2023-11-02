@@ -22,7 +22,7 @@ public class NPCStateMachine : StateController<NPCStateMachine.NPCState>
     //Supervisor takeOver
     public bool supervisor = false;
 
-    //type of info
+    //info
     public bool incorrectInfo = false;
 
     //Movement
