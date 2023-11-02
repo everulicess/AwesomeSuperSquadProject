@@ -11,11 +11,13 @@ public class DialogueManager : MonoBehaviour
     public TMP_Text dialogueText;
     public Button continueButton;
     public GameObject dialoguePrefab;
+    public bool hasTextPrefab;
 
     private Queue<string> sentences;
 
     private void Awake()
     {
+        hasTextPrefab = false;
         if (instance == null)
         {
             instance = this;
@@ -35,6 +37,8 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {
         // Clear any previous sentences
+        hasTextPrefab = true;
+        
         sentences.Clear();
 
         foreach (string sentence in dialogue.sentences)
@@ -60,14 +64,12 @@ public class DialogueManager : MonoBehaviour
 
     public void LinkTextAndButton(Button _button, TMP_Text _text, GameObject _dialoguePrefab)
     {
-        Debug.Log("1");
         continueButton = _button;
-        Debug.Log("2");
         dialogueText = _text;
         dialoguePrefab = _dialoguePrefab;
-        Debug.Log(continueButton);
-        Debug.Log(dialogueText);
-        Debug.Log(dialoguePrefab);
+        Debug.LogError(continueButton);
+        Debug.LogError(dialogueText);
+        Debug.LogError(dialoguePrefab);
     }
 
     IEnumerator TypeSentence(string sentence)
@@ -82,6 +84,19 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
+        hasTextPrefab = false;
         Destroy(dialoguePrefab);
     }
+
+/*    public void checkForDialogue()
+    {
+        Debug.LogError(hasTextPrefab);
+        if (hasTextPrefab)
+        {
+            Debug.LogError(dialoguePrefab);
+            Destroy(dialoguePrefab);
+            Debug.LogError(hasTextPrefab);
+            hasTextPrefab = false;
+        }
+    }*/
 }
