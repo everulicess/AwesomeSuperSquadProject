@@ -11,4 +11,9 @@ public class AudioManager : MonoBehaviour
         buttonPress.Play();
     }
 
+    public void PlayScannerBeep()
+    {
+        buttonPress.Play();
+    }
+
 }
