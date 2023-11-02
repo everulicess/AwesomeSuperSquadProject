@@ -14,6 +14,7 @@ public class ApprovedState : State<NPCStateMachine.NPCState>
     public override void EnterState()
     {
         trustManager = GameObject.FindObjectOfType<TrustManager>();
+
         if (npc.incorrectInfo)
         {
             trustManager.LoseTrust(20f);
@@ -63,9 +64,13 @@ public class ApprovedState : State<NPCStateMachine.NPCState>
             npc.DestroyPrefab();
         }
 
-        //Invoke("DestroyPrefab", 2);
-
     }
+
+
+
+
+
+
 
     public void acceptedIncorrectVirusNPC()
     {

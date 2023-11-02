@@ -43,6 +43,6 @@ public class WaitingState : State<NPCStateMachine.NPCState>
         {
             Debug.Log("WAITING STATE SPECIAL");
         }
-        
+        Debug.Log("WAITING STATE L");
     }
 }
