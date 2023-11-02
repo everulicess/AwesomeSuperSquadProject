@@ -14,7 +14,7 @@ public class WaveSpawner : MonoBehaviour
 
     private void Start()
     {
-        SpawnNPC();
+        //SpawnNPC();
     }
     private void Update()
     {

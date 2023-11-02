@@ -14,22 +14,34 @@ public class ApprovalButton : MonoBehaviour
     }
     public void AcceptNPC()
     {
-        GameObject.FindGameObjectWithTag("NPC").GetComponent<NPCStateMachine>().approved = true;
-        microchipscanner.hasDecided = true;
-        gM.decisionMade = true;
-        Debug.Log("ACCEPTED");
+        if (gM.requirementsClicked)
+        {
+            GameObject.FindGameObjectWithTag("NPC").GetComponent<NPCStateMachine>().approved = true;
+            microchipscanner.hasDecided = true;
+            gM.decisionMade = true;
+            Debug.Log("ACCEPTED");
+        }
+        
     }
     public void RejectNPC()
     {
-        GameObject.FindGameObjectWithTag("NPC").GetComponent<NPCStateMachine>().rejected = true;
-        microchipscanner.hasDecided = true;
-        gM.decisionMade = true;
-        Debug.Log("REJECTED");
+        if (gM.requirementsClicked)
+        {
+            GameObject.FindGameObjectWithTag("NPC").GetComponent<NPCStateMachine>().rejected = true;
+            microchipscanner.hasDecided = true;
+            gM.decisionMade = true;
+            Debug.Log("REJECTED");
+        }
+        
     }
     public void DetainNPC()
     {
-        GameObject.FindGameObjectWithTag("NPC").GetComponent<NPCStateMachine>().detained = true;
-        microchipscanner.hasDecided = true;
-        Debug.Log("DETAINED");
+        if (gM.requirementsClicked)
+        {
+            GameObject.FindGameObjectWithTag("NPC").GetComponent<NPCStateMachine>().detained = true;
+            microchipscanner.hasDecided = true;
+            Debug.Log("DETAINED");
+        }
+       
     }
 }

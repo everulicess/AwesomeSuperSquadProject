@@ -12,9 +12,12 @@ public class WalkingState : State<NPCStateMachine.NPCState>
         npc = _npc;
     }
 
+    RequirementsCanvas requirements;
+
     WaveSpawner spawn;
     public override void EnterState()
     {
+        requirements = GameObject.FindObjectOfType<RequirementsCanvas>();
         spawn = GameObject.FindObjectOfType<WaveSpawner>();
         spawn.isThereNPC = true;
         //target = WayPoints.points[wavePointIndex];
@@ -22,7 +25,10 @@ public class WalkingState : State<NPCStateMachine.NPCState>
     }
     public override void UpdateState()
     {
-       
+        if (npc.virusNPC)
+        {
+            requirements.OnVirusClicked();
+        }
         Debug.Log("WALKING STATE");
         Vector3 dir = npc.target.position - npc.transform.position;
         npc.transform.Translate(dir.normalized * npc.speed * Time.deltaTime, Space.World);
