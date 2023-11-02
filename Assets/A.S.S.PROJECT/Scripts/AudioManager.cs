@@ -8,14 +8,14 @@ public class AudioManager : MonoBehaviour
 
     public void PlayButtonPress()
     {
-        buttonPress.Play();
         Debug.Log("BEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEP");
+        buttonPress.Play();
     }
 
     public void PlayScannerBeep()
-    {
-        buttonPress.Play();
+    {      
         Debug.Log("SCANNER BEEEEEEEEEEEEEEEEEEEEEEEEEEEEEP");
+        buttonPress.Play();
     }
 
 }
