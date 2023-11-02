@@ -10,7 +10,7 @@ public class RequirementsCanvas : MonoBehaviour
     [SerializeField] GameObject requirementList;
     [SerializeField] GameObject warningObject;
 
-    
+    [SerializeField] GameObject warningButton;
 
     GameManager gM;
     
@@ -21,13 +21,23 @@ public class RequirementsCanvas : MonoBehaviour
         StartScreen();
     }
 
-    
+    private bool warningactivated;
     public void OnExclamationClicked()
     {
         gM.requirementsClicked = true;
         exclamationObject.SetActive(false);
         background.SetActive(true);
         requirementList.SetActive(true);
+        warningObject.SetActive(false);
+        if (!warningactivated)
+        {
+            warningButton.SetActive(false);
+        }
+        else
+        {
+            warningButton.SetActive(true);
+        }
+        
     }
     public void OnGoBackClicked()
     {
@@ -38,6 +48,13 @@ public class RequirementsCanvas : MonoBehaviour
     {
         exclamationObject.SetActive(true);
         background.SetActive(false);
+        requirementList.SetActive(false);
+    }
+    public void OnVirusClicked()
+    {
+        warningactivated = true;
+        warningObject.SetActive(true);
+        exclamationObject.SetActive(false);
         requirementList.SetActive(false);
     }
 }

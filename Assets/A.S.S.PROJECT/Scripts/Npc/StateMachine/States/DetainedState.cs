@@ -17,7 +17,6 @@ public class DetainedState : State<NPCStateMachine.NPCState>
             //gain Points
 
             Debug.Log("Gaining Points-----------Virus Detained");
-
         }
     }
 

@@ -4134,7 +4134,8 @@ MonoBehaviour:
   exclamationObject: {fileID: 278002950}
   background: {fileID: 1296771467}
   requirementList: {fileID: 680835866}
-  warningObject: {fileID: 0}
+  warningObject: {fileID: 1378830379}
+  warningButton: {fileID: 741541220}
 --- !u!114 &617282902
 MonoBehaviour:
   m_ObjectHideFlags: 0

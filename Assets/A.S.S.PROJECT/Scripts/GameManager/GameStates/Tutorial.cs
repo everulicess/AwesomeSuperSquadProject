@@ -10,6 +10,7 @@ public class Tutorial : State<GameManager.GameState>
         gM = _gM;
     }
 
+    WaveSpawner spawn;
     TutorialStates TutState;
     public enum TutorialStates
     {
@@ -22,6 +23,7 @@ public class Tutorial : State<GameManager.GameState>
     public override void EnterState()
     {
         ClosePanels();
+        spawn = GameObject.FindObjectOfType<WaveSpawner>();
         Debug.Log(" Tutorial ENTER");
         TutState = TutorialStates.TutotialPart1;
     }
@@ -67,11 +69,14 @@ public class Tutorial : State<GameManager.GameState>
                 if (gM.requirementsClicked)
                 {
                     gM.tutorialPart_2.SetActive(false);
+                    spawn.isThereNPC = false;
+                    spawn.SpawnNPC();
                     TutState = TutorialStates.TutotialPart3;
                 }
                 break;
             //NPC comes in and show how to scan
             case TutorialStates.TutotialPart3:
+                
                 //Panels
                 gM.tutorialPart_3.SetActive(true);
                 //change bool on the NPC when scanned
