@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
 using TMPro;
 
+
 public class MicrochipScanner : MonoBehaviour
 {
 
@@ -12,6 +13,7 @@ public class MicrochipScanner : MonoBehaviour
     [SerializeField] TextMeshProUGUI visaText;
     [SerializeField] Image idImage;
     [SerializeField] Image visaImage;
+    [SerializeField] public AudioManager audioManager;
 
     public bool hasDecided = false;
 
@@ -25,12 +27,18 @@ public class MicrochipScanner : MonoBehaviour
         grabbable.activated.AddListener(ScanMicrochip);
 
         gM = GameObject.FindObjectOfType<GameManager>();
+        
+        
+
+        
+        
     }
     private void Update()
     {
         if (hasDecided)
         {
             ResetInfo();
+            
         }
     }
     private void ResetInfo()
@@ -63,7 +71,8 @@ public class MicrochipScanner : MonoBehaviour
                 visaText.text = "" + (scannedNPC.GetVisaInfo());
                 idImage.sprite = scannedNPC.GetIDInfo().photoID;
                 visaImage.sprite = scannedNPC.GetVisaInfo().photoID;
-                
+                audioManager.PlayScannerBeep(); //play scanner beep (Thomas)
+
             }
         }
 

@@ -12,12 +12,15 @@ public class WaitingState : State<NPCStateMachine.NPCState>
 
     public override void EnterState()
     {
-        
+        Debug.LogError("Spawning TextBox");
+        npc.sd.CreateDialogue();
+        //Debug.LogError("Trigger TextBox");
+        //npc.sd.TriggerDialogue();
     }
 
     public override void ExitState()
     {
-
+        DialogueManager.instance.EndDialogue();
     }
 
     public override NPCStateMachine.NPCState GetNextState()

@@ -30,6 +30,8 @@ public class NPCStateMachine : StateController<NPCStateMachine.NPCState>
     public int wavePointIndex = 0;
     public float speed = 4f;
 
+    public SpawnDialogue sd;
+    public Dialogue dialogue;
     //Spawner
     public WaveSpawner spawn;
     public enum NPCState
@@ -44,9 +46,11 @@ public class NPCStateMachine : StateController<NPCStateMachine.NPCState>
 
     private void Awake()
     {
+        
         target = WayPoints.points[wavePointIndex];
         spawn = GameObject.FindGameObjectWithTag("Spawn").GetComponent<WaveSpawner>();
-        
+        sd = GameObject.FindObjectOfType<SpawnDialogue>();
+
         States[NPCState.WalkingState] = new WalkingState(this);
         States[NPCState.Scanning] = new ScanningState(this);
         States[NPCState.WaitForDecision] = new WaitingState(this);
