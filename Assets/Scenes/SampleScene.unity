@@ -385,19 +385,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcPrefab:
+  - {fileID: 7330913612745825035, guid: 79f727e1814a043418cc73fd33097b5e, type: 3}
+  - {fileID: 7330913612745825035, guid: fc1f83eba2b69a44cb60c111abc49fa2, type: 3}
   - {fileID: 7330913612745825035, guid: cbe0d2777e171ff4d8c10e461e557b05, type: 3}
-  - {fileID: 7330913612745825035, guid: 5c87b284dccee7f41b0b6834f04c6eb3, type: 3}
-  - {fileID: 7330913612745825035, guid: 3afe0139a1accba4aae8f03ea50ea873, type: 3}
-  - {fileID: 7330913612745825035, guid: 3afe0139a1accba4aae8f03ea50ea873, type: 3}
-  - {fileID: 2520448578212934940, guid: 8b1dcc60f8120d34a9bf33899f902f82, type: 3}
-  - {fileID: 2520448578212934940, guid: 8b1dcc60f8120d34a9bf33899f902f82, type: 3}
-  - {fileID: 7330913612745825035, guid: ec7e208d734588f4e98512bdc2bfc706, type: 3}
-  - {fileID: 7330913612745825035, guid: 3afe0139a1accba4aae8f03ea50ea873, type: 3}
-  - {fileID: 2520448578212934940, guid: 8b1dcc60f8120d34a9bf33899f902f82, type: 3}
-  - {fileID: 2520448578212934940, guid: 8b1dcc60f8120d34a9bf33899f902f82, type: 3}
-  - {fileID: 7330913612745825035, guid: 3afe0139a1accba4aae8f03ea50ea873, type: 3}
-  - {fileID: 2520448578212934940, guid: 8b1dcc60f8120d34a9bf33899f902f82, type: 3}
-  - {fileID: 2520448578212934940, guid: 8b1dcc60f8120d34a9bf33899f902f82, type: 3}
+  - {fileID: 7330913612745825035, guid: e1dd64f3d385d864b9602e30d3d35593, type: 3}
+  - {fileID: 7330913612745825035, guid: 2d9fa9e5ca6c7a4418593d5fab0c3a2d, type: 3}
   spawnPoint: {fileID: 57051199}
   npcNumber: 0
   isThereNPC: 0
@@ -480,7 +472,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 57051194}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -948.971, y: -537.964, z: -7.724909}
+  m_LocalPosition: {x: -946.45, y: -539.34, z: -4.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15509,7 +15501,7 @@ Transform:
   m_GameObject: {fileID: 1779883473}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -962.3795, y: -540, z: -5.8539}
-  m_LocalScale: {x: 2.875887, y: 1, z: 3.3232603}
+  m_LocalScale: {x: 3.9943194, y: 1.3889, z: 4.6156764}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1473124919}
@@ -17875,7 +17867,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8760423818628220248}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6576263956945749840}
+        m_TargetAssemblyTypeName: RequirementsCanvas, Assembly-CSharp
+        m_MethodName: OnExclamationClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &91228105264296870
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23497,7 +23501,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4324736815748979603}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6576263956945749840}
+        m_TargetAssemblyTypeName: RequirementsCanvas, Assembly-CSharp
+        m_MethodName: OnVirusClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8435946571910566833
 GameObject:
   m_ObjectHideFlags: 0
