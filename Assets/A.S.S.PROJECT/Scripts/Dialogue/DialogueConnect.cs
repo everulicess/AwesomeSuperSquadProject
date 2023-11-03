@@ -12,7 +12,7 @@ public class DialogueConnect : MonoBehaviour
     [SerializeField] private Button continueButton;
     [SerializeField] private Dialogue dialogue;
 
-    private Canvas dialogueCanvas;
+    private Canvas tabletTutorialUI;
     private GameObject dialoguePrefab;
     
     private void Awake()
@@ -22,18 +22,18 @@ public class DialogueConnect : MonoBehaviour
         DialogueManager dm = dialogueManager.GetComponent<DialogueManager>();
         dm.LinkTextAndButton(continueButton, dialogueText, dialoguePrefab);
         dm.ConnectDialoguePrefab();
-        dialogueCanvas = GameObject.Find("DialogueCanvas").GetComponent<Canvas>();
+        tabletTutorialUI = GameObject.Find("TabletTutorialUI").GetComponent<Canvas>();
     }
 
     private void Start()
     {
-        if (dialogueCanvas != null)
+        if (tabletTutorialUI != null)
         {
-            this.transform.SetParent(dialogueCanvas.transform, false);
+            this.transform.SetParent(tabletTutorialUI.transform, false);
         }
         else
         {
-            Debug.LogError("dialogueCanvas is not found. Make sure you have a GameObject named 'DialogueCanvas' in your scene.");
+            Debug.LogError("TabletTutorialUI is not found. Make sure you have a GameObject named 'DialogueCanvas' in your scene.");
         }
         TriggerDialogue();
     }
