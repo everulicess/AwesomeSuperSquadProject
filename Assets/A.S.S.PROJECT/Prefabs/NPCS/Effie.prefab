@@ -183,7 +183,7 @@ MonoBehaviour:
     antivirus: BiSnake 3.27C
   visaInfo:
     photoID: {fileID: 21300000, guid: ccc25c4ba01a63149b740402695f4f4b, type: 3}
-    reason: Tourist visa
+    reason: Working holiday visa
     name: Effie Trinket
     age: 47
     idNumber: 27156955484

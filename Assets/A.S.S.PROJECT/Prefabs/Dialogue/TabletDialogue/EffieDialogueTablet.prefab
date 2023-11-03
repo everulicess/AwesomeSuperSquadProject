@@ -267,9 +267,13 @@ MonoBehaviour:
   continueButton: {fileID: 4038524267232197815}
   dialogue:
     sentences:
-    - "Hello, mi name is Effie\t"
-    - "Je suis fran\xE7ais"
-    - I love your clothings style and I need to check it out for myslf!
+    - Bonjour, je m'appele Effie Trinket
+    - I love the greenlandic clothingstyle and I need to check it out for my own
+      company!
+    - There are so many details, culturals and passions put into one clothing piece,
+      which will always be exquisite for one person or another!
+    - "During my visit I will still be working as financial manager for Trink\u2122,
+      while enjoying the cultural cuisine and wardrobe of Greenland"
 --- !u!1 &3563557083084880888
 GameObject:
   m_ObjectHideFlags: 0
