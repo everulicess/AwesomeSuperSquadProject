@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DialogueConnect : MonoBehaviour
+public class DialogueConnectTutorial: MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private TMP_Text dialogueText;
@@ -33,7 +33,7 @@ public class DialogueConnect : MonoBehaviour
         }
         else
         {
-            Debug.LogError("TabletTutorialUI is not found. Make sure you have a GameObject named 'DialogueCanvas' in your scene.");
+            Debug.LogError("TabletTutorialUI is not found. Make sure you have a GameObject named 'TabletTutorialUI' in your scene.");
         }
         TriggerDialogue();
     }
