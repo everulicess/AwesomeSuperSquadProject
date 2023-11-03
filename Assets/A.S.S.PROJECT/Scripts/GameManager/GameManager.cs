@@ -20,6 +20,7 @@ public class GameManager : StateController<GameManager.GameState>
     public GameObject tutorialPart_3;
     public GameObject tutorialPart_4;
     public GameObject tutorialPart_5;
+    public GameObject tutorialPart_6;
 
 
     public enum GameState

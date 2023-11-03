@@ -19,6 +19,7 @@ public class Tutorial : State<GameManager.GameState>
         TutotialPart3,
         TutotialPart4,
         TutotialPart5,
+        TutorialPart6,
     }
     public override void EnterState()
     {
