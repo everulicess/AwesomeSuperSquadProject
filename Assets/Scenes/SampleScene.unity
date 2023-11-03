@@ -3505,7 +3505,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 429054050}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.006416, y: 3.653, z: 6.8405523}
+  m_LocalPosition: {x: -18.006416, y: 3.533, z: 6.8405523}
   m_LocalScale: {x: 3.4621449, y: 1.3761656, z: 0.22063}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3524,7 +3524,7 @@ GameObject:
   - component: {fileID: 459079641}
   - component: {fileID: 459079640}
   m_Layer: 5
-  m_Name: Tutorial_Text (TMP)
+  m_Name: TutorialReq_Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4033,7 +4033,7 @@ GameObject:
   m_Component:
   - component: {fileID: 565041852}
   m_Layer: 5
-  m_Name: Tutorial Scanner
+  m_Name: TutorialScanner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6093,7 +6093,7 @@ GameObject:
   m_Component:
   - component: {fileID: 817130487}
   m_Layer: 5
-  m_Name: Tutorial (2)
+  m_Name: TutorialPathToTabletID
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6855,7 +6855,7 @@ GameObject:
   - component: {fileID: 971260343}
   - component: {fileID: 971260342}
   m_Layer: 5
-  m_Name: Canvas (1)
+  m_Name: TutorialUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6873,9 +6873,9 @@ RectTransform:
   m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1541728678}
   - {fileID: 565041852}
   - {fileID: 1443488629}
-  - {fileID: 1541728678}
   - {fileID: 817130487}
   - {fileID: 1217165816}
   m_Father: {fileID: 1861223299}
@@ -7170,6 +7170,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1979915163}
+  - {fileID: 1596120804}
   - {fileID: 1246621937}
   - {fileID: 7093122}
   - {fileID: 1077054718}
@@ -8487,7 +8488,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1217165816}
   m_Layer: 5
-  m_Name: Tutorial (3)
+  m_Name: TutorialPersonAndSystemData
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10950,7 +10951,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1443488629}
   m_Layer: 5
-  m_Name: Tutorial Scan(1)
+  m_Name: TutorialScanNPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11970,7 +11971,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1541728678}
   m_Layer: 5
-  m_Name: Tutorial requirements (3)
+  m_Name: TutorialRequirements
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12325,11 +12326,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1596120803}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -941.9826, y: -543.035, z: -9.480553}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2015029818}
+  m_Father: {fileID: 1043579898}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1596120805
@@ -12352,8 +12353,8 @@ MonoBehaviour:
   requirementsClicked: 0
   firstScan: 0
   decisionMade: 0
-  tutorialPart_1: {fileID: 565041851}
-  tutorialPart_2: {fileID: 1541728677}
+  tutorialPart_1: {fileID: 1541728677}
+  tutorialPart_2: {fileID: 565041851}
   tutorialPart_3: {fileID: 1443488628}
   tutorialPart_4: {fileID: 817130486}
   tutorialPart_5: {fileID: 1217165815}
@@ -15580,8 +15581,7 @@ Transform:
   m_LocalPosition: {x: 19.03955, y: -2.3760986, z: 4.509021}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1596120804}
+  m_Children: []
   m_Father: {fileID: 1979915163}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
