@@ -118,7 +118,6 @@ GameObject:
   - component: {fileID: 6644743220391815957}
   - component: {fileID: 1322513576043012977}
   - component: {fileID: 2486882962558747377}
-  - component: {fileID: -2606588332978859507}
   m_Layer: 0
   m_Name: Effie
   m_TagString: NPC
@@ -235,17 +234,5 @@ MonoBehaviour:
   dialoguePrefab: {fileID: 2305002389385135379, guid: 77dcb43b249605c489ad72b0b747c9c4, type: 3}
   dialogue:
     sentences:
-    - Hi! I am Effie!
-    - I love the clothing in Greenland and want to go there!!!!!!
---- !u!114 &-2606588332978859507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5727521783464023859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5c89c616993e7047bf59872d179c25c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+    - This does not work. If you want to change the text of this dialogue, you will
+      have to adjust the text in the [Dialogue Prefab] itself.
