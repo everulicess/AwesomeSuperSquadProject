@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 2762933224335113610}
   - component: {fileID: 6644743220391815957}
   - component: {fileID: 1322513576043012977}
+  - component: {fileID: -6417180964560704103}
   m_Layer: 0
   m_Name: Abdul
   m_TagString: NPC
@@ -216,3 +217,20 @@ MonoBehaviour:
   dialogue:
     sentences: []
   spawn: {fileID: 0}
+--- !u!114 &-6417180964560704103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5727521783464023859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6397cf5c45cceff4e9d4134ca98a1071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialoguePrefab: {fileID: 2305002389385135379, guid: 8e6d4d937b150ce41a4d30bb4e1e993e, type: 3}
+  dialogue:
+    sentences:
+    - This does not work. If you want to change the text of this dialogue, you will
+      have to adjust the text in the [Dialogue Prefab] itself.
