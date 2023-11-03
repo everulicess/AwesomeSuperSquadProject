@@ -29,20 +29,18 @@ public class RequirementsCanvas : MonoBehaviour
         background.SetActive(true);
         requirementList.SetActive(true);
         warningObject.SetActive(false);
-        if (!warningactivated)
-        {
-            warningButton.SetActive(false);
-        }
-        else
-        {
-            warningButton.SetActive(true);
-        }
+        warningButton.SetActive(warningactivated);
+        //if (!warningactivated)
+        //{
+        //    warningButton.SetActive(false);
+        //}
+        //else
+        //{
+        //    warningButton.SetActive(true);
+        //}
         
     }
-    public void OnGoBackClicked()
-    {
-        StartScreen();
-    }
+    
 
     private void StartScreen()
     {
@@ -52,6 +50,7 @@ public class RequirementsCanvas : MonoBehaviour
     }
     public void OnVirusClicked()
     {
+        warningButton.SetActive(false);
         warningactivated = true;
         warningObject.SetActive(true);
         exclamationObject.SetActive(false);

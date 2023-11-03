@@ -22,13 +22,14 @@ public class WalkingState : State<NPCStateMachine.NPCState>
         spawn.isThereNPC = true;
         //target = WayPoints.points[wavePointIndex];
         //Debug.Log("IT'S WORKIIIIIINNGGGGGG");
-    }
-    public override void UpdateState()
-    {
         if (npc.virusNPC)
         {
             requirements.OnVirusClicked();
         }
+    }
+    public override void UpdateState()
+    {
+       
         Debug.Log("WALKING STATE");
         Vector3 dir = npc.target.position - npc.transform.position;
         npc.transform.Translate(dir.normalized * npc.speed * Time.deltaTime, Space.World);
