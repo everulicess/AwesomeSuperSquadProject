@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6397cf5c45cceff4e9d4134ca98a1071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialoguePrefab: {fileID: 4035370067063510833, guid: 140e0e24e43a922479cacb2a12c63123, type: 3}
+  dialoguePrefab: {fileID: 2305002389385135379, guid: 77dcb43b249605c489ad72b0b747c9c4, type: 3}
   dialogue:
     sentences:
     - Hi! I am Effie!

@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 2975061356151020741}
   - component: {fileID: 3427866534680150805}
   m_Layer: 5
-  m_Name: EffieDialogue
+  m_Name: EffieDialogueWorld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
