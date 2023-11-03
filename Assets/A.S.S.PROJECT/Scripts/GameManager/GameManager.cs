@@ -13,7 +13,7 @@ public class GameManager : StateController<GameManager.GameState>
 
     //Tutorial variables
     //booleans
-    public bool scannerpicked, requirementsClicked, firstScan, decisionMade = false;
+    public bool tabletpicked, scannerpicked, requirementsClicked, firstScan, decisionMade = false;
     //UI
     public GameObject tutorialPart_1;
     public GameObject tutorialPart_2;

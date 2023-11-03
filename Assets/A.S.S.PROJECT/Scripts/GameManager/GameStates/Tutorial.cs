@@ -19,7 +19,7 @@ public class Tutorial : State<GameManager.GameState>
         TutotialPart3,
         TutotialPart4,
         TutotialPart5,
-        TutorialPart6,
+        TutotialPart6,
     }
     public override void EnterState()
     {
@@ -51,57 +51,67 @@ public class Tutorial : State<GameManager.GameState>
         gM.MenuHandle();
         switch (TutState)
         {
-            //pick up scanner
+            //Pick up tutorial tablet
             case TutorialStates.TutotialPart1:
                 //hide panels and change the booleans
                 gM.tutorialPart_1.SetActive(true);
-                if (gM.scannerpicked)
+                if (gM.tabletpicked)
                 {
                     gM.tutorialPart_1.SetActive(false);
+                    TutState = TutorialStates.TutotialPart2;
+                }
+                break;
+            //pick up scanner
+            case TutorialStates.TutotialPart2:
+                //hide panels and change the booleans
+                gM.tutorialPart_2.SetActive(true);
+                if (gM.scannerpicked)
+                {
+                    gM.tutorialPart_2.SetActive(false);
                     TutState = TutorialStates.TutotialPart2;
                 }
 
                 break;
             //Show how the requirements work
-            case TutorialStates.TutotialPart2:
+            case TutorialStates.TutotialPart3:
                 //Panels and change bool
-                gM.tutorialPart_2.SetActive(true);
+                gM.tutorialPart_3.SetActive(true);
                 //change bool when requirements cicked
                 if (gM.requirementsClicked)
                 {
-                    gM.tutorialPart_2.SetActive(false);
+                    gM.tutorialPart_3.SetActive(false);
                     spawn.isThereNPC = false;
                     spawn.SpawnNPC();
                     TutState = TutorialStates.TutotialPart3;
                 }
                 break;
             //NPC comes in and show how to scan
-            case TutorialStates.TutotialPart3:
+            case TutorialStates.TutotialPart4:
                 
                 //Panels
-                gM.tutorialPart_3.SetActive(true);
+                gM.tutorialPart_4.SetActive(true);
                 //change bool on the NPC when scanned
                 if (gM.firstScan)
                 {
-                    gM.tutorialPart_3.SetActive(false);
+                    gM.tutorialPart_4.SetActive(false);
                     TutState = TutorialStates.TutotialPart4;
                 }
                 break;
             //show the info panel and how it works
             //show how to make decisions
-            case TutorialStates.TutotialPart4:
+            case TutorialStates.TutotialPart5:
                 //Hide Panels
-                gM.tutorialPart_4.SetActive(true);
                 gM.tutorialPart_5.SetActive(true);
+                gM.tutorialPart_6.SetActive(true);
                 if (gM.decisionMade)
                 {
                     gM.tutorialPart_5.SetActive(false);
-                    gM.tutorialPart_4.SetActive(false);
+                    gM.tutorialPart_6.SetActive(false);
                     TutState = TutorialStates.TutotialPart5;
                 }
                 break;
             
-            case TutorialStates.TutotialPart5:
+            case TutorialStates.TutotialPart6:
                 //Hide Panels
                 
                 //change tutorial finished boolean on the buttons

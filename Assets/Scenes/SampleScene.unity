@@ -8680,7 +8680,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1119588236}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -50, y: -50.5, z: -0.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13838,16 +13838,17 @@ MonoBehaviour:
   startNewDay: 0
   endDay: 0
   isMenu: 0
+  tabletpicked: 0
   scannerpicked: 0
   requirementsClicked: 0
   firstScan: 0
   decisionMade: 0
-  tutorialPart_1: {fileID: 565041851}
+  tutorialPart_1: {fileID: 552841250}
   tutorialPart_2: {fileID: 1541728677}
-  tutorialPart_3: {fileID: 1443488628}
-  tutorialPart_4: {fileID: 817130486}
-  tutorialPart_5: {fileID: 1217165815}
-  tutorialPart_6: {fileID: 0}
+  tutorialPart_3: {fileID: 565041851}
+  tutorialPart_4: {fileID: 1443488628}
+  tutorialPart_5: {fileID: 817130486}
+  tutorialPart_6: {fileID: 1217165815}
 --- !u!82 &1596120806
 AudioSource:
   m_ObjectHideFlags: 0
@@ -16663,7 +16664,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875166490}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0.9961947, z: -0, w: -0.08715578}
   m_LocalPosition: {x: -957.656, y: -538.789, z: -0.246}
   m_LocalScale: {x: 0.4464642, y: 0.4464642, z: 0.4464642}
   m_ConstrainProportionsScale: 0
@@ -16673,7 +16674,7 @@ Transform:
   - {fileID: 1875916661}
   m_Father: {fileID: 975206482}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 190, z: 0}
 --- !u!114 &1875166492
 MonoBehaviour:
   m_ObjectHideFlags: 0
