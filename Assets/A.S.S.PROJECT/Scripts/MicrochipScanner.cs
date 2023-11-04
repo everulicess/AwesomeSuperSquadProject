@@ -52,9 +52,9 @@ public class MicrochipScanner : MonoBehaviour
     {
         Vector3 direction = Vector3.forward;
 
-        Ray scanRay = new Ray(transform.position, transform.TransformDirection(direction*10));
+        Ray scanRay = new Ray(transform.position, transform.TransformDirection(direction * 10));
 
-        Debug.DrawRay(transform.position, transform.TransformDirection(direction*10));
+        //Debug.DrawRay(transform.position, transform.TransformDirection(direction*10));
 
         Debug.Log("Scanning the Microchip");
         if (Physics.Raycast(scanRay, out RaycastHit hit, 10))
@@ -63,7 +63,7 @@ public class MicrochipScanner : MonoBehaviour
             {
                 hasDecided = false;
                 hit.collider.gameObject.GetComponent<NPCStateMachine>().scanned = true;
-                Debug.Log($"This object named -------------------------- has been scanned");
+                //Debug.Log($"This object named -------------------------- has been scanned");
             }
             if (hit.collider.gameObject.TryGetComponent<NPCInfo>(out NPCInfo scannedNPC))
             {
@@ -85,7 +85,7 @@ public class MicrochipScanner : MonoBehaviour
         if (other.gameObject.name == "Right Controller"||other.gameObject.name == "Left Controller")
         {
             gM.scannerpicked = true;
-            Debug.Log($"{other.gameObject.name}----------------------------------------------------------");
+            //Debug.Log($"{other.gameObject.name}----------------------------------------------------------");
            
         }
         

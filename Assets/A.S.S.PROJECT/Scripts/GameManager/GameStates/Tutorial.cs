@@ -68,7 +68,7 @@ public class Tutorial : State<GameManager.GameState>
                 if (gM.scannerpicked)
                 {
                     gM.tutorialPart_2.SetActive(false);
-                    TutState = TutorialStates.TutotialPart2;
+                    TutState = TutorialStates.TutotialPart3;
                 }
 
                 break;
@@ -76,13 +76,16 @@ public class Tutorial : State<GameManager.GameState>
             case TutorialStates.TutotialPart3:
                 //Panels and change bool
                 gM.tutorialPart_3.SetActive(true);
+                Debug.Log("requirements Tutorial is active");
                 //change bool when requirements cicked
                 if (gM.requirementsClicked)
                 {
+                    Debug.Log("requirements Tutorial is inactive");
+
                     gM.tutorialPart_3.SetActive(false);
                     spawn.isThereNPC = false;
                     spawn.SpawnNPC();
-                    TutState = TutorialStates.TutotialPart3;
+                    TutState = TutorialStates.TutotialPart4;
                 }
                 break;
             //NPC comes in and show how to scan
@@ -94,7 +97,7 @@ public class Tutorial : State<GameManager.GameState>
                 if (gM.firstScan)
                 {
                     gM.tutorialPart_4.SetActive(false);
-                    TutState = TutorialStates.TutotialPart4;
+                    TutState = TutorialStates.TutotialPart5;
                 }
                 break;
             //show the info panel and how it works
@@ -107,7 +110,7 @@ public class Tutorial : State<GameManager.GameState>
                 {
                     gM.tutorialPart_5.SetActive(false);
                     gM.tutorialPart_6.SetActive(false);
-                    TutState = TutorialStates.TutotialPart5;
+                    TutState = TutorialStates.TutotialPart6;
                 }
                 break;
             
