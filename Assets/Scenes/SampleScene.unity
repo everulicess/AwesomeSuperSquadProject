@@ -4075,10 +4075,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f672e7f8945300f46a280da96c3638c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idText: {fileID: 3751772872153552577}
-  visaText: {fileID: 5678462583096419370}
-  idImage: {fileID: 1887222229}
-  visaImage: {fileID: 462322829}
+  idText: {fileID: 0}
+  visaText: {fileID: 0}
+  idImage: {fileID: 0}
+  visaImage: {fileID: 0}
   audioManager: {fileID: 0}
   hasDecided: 0
 --- !u!65 &379179172
@@ -20703,8 +20703,8 @@ MonoBehaviour:
   firstScan: 0
   decisionMade: 0
   tutorialPart_1: {fileID: 552841250}
-  tutorialPart_2: {fileID: 565041851}
-  tutorialPart_3: {fileID: 1541728677}
+  tutorialPart_2: {fileID: 1541728677}
+  tutorialPart_3: {fileID: 565041851}
   tutorialPart_4: {fileID: 1443488628}
   tutorialPart_5: {fileID: 817130486}
   tutorialPart_6: {fileID: 1217165815}
@@ -24288,7 +24288,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1861223299
 Transform:
   m_ObjectHideFlags: 0
