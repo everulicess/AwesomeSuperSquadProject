@@ -14,8 +14,9 @@ public class SpawnDialogue : MonoBehaviour
 
     private void Awake()
     {
-        Debug.LogError("Awake Textbox");
+        Debug.Log("Spawn Textbox");
         DialogueManager.instance.hasTextPrefab = true;
+        CreateDialogue();
         /*DialogueManager.instance.checkForDialogue();*/
 /*        GameObject dialogueManager = GameObject.Find("DialogueManager");
         DialogueManager dm = dialogueManager.GetComponent<DialogueManager>();
@@ -24,14 +25,14 @@ public class SpawnDialogue : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        Debug.LogError("Trigger Effie Dialogue");
+        Debug.Log("Trigger Dialogue");
         // Call Dialogue Manager to start the dialogue
         DialogueManager.instance.StartDialogue(dialogue);
     }
 
     public void CreateDialogue()
     {
-        Debug.LogError("Spawning Effie TextBox");
+        Debug.Log("Spawning TextBox");
         Instantiate(dialoguePrefab, new Vector3(0, 0, 0), Quaternion.identity);
     }
 }

@@ -64,12 +64,17 @@ public class DialogueManager : MonoBehaviour
 
     public void LinkTextAndButton(Button _button, TMP_Text _text, GameObject _dialoguePrefab)
     {
+        if (dialoguePrefab != null)
+        {
+            Destroy(dialoguePrefab);
+            Debug.Log("Destroy previous Textbox");
+        }
         continueButton = _button;
         dialogueText = _text;
         dialoguePrefab = _dialoguePrefab;
-        Debug.LogError(continueButton);
-        Debug.LogError(dialogueText);
-        Debug.LogError(dialoguePrefab);
+        Debug.Log(continueButton);
+        Debug.Log(dialogueText);
+        Debug.Log(dialoguePrefab);
     }
 
     IEnumerator TypeSentence(string sentence)
