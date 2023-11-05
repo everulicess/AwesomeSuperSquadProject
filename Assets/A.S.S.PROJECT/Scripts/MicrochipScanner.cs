@@ -52,18 +52,19 @@ public class MicrochipScanner : MonoBehaviour
     {
         Vector3 direction = Vector3.forward;
 
-        Ray scanRay = new Ray(transform.position, transform.TransformDirection(direction * 10));
+        Ray scanRay = new Ray(transform.position, transform.TransformDirection(direction * 20));
 
-        //Debug.DrawRay(transform.position, transform.TransformDirection(direction*10));
+        Debug.DrawRay(transform.position, transform.TransformDirection(direction*20));
 
         Debug.Log("Scanning the Microchip");
         if (Physics.Raycast(scanRay, out RaycastHit hit, 10))
         {
+            Debug.LogError($"This object named {hit.collider.name} has been scanned");
             if (hit.collider.tag == "NPC")
             {
                 hasDecided = false;
                 hit.collider.gameObject.GetComponent<NPCStateMachine>().scanned = true;
-                //Debug.Log($"This object named -------------------------- has been scanned");
+                Debug.LogError($"This object named {hit.collider.name} has been scanned");
             }
             if (hit.collider.gameObject.TryGetComponent<NPCInfo>(out NPCInfo scannedNPC))
             {
