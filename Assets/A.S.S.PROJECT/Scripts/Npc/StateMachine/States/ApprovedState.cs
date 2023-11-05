@@ -5,7 +5,7 @@ using UnityEngine;
 public class ApprovedState : State<NPCStateMachine.NPCState>
 {
     NPCStateMachine npc;
-    TrustManager trustManager;
+    
     public ApprovedState(NPCStateMachine _npc) : base(NPCStateMachine.NPCState.Approved)
     {
         npc = _npc;
@@ -13,14 +13,20 @@ public class ApprovedState : State<NPCStateMachine.NPCState>
 
     public override void EnterState()
     {
-        trustManager = GameObject.FindObjectOfType<TrustManager>();
-
+        if (npc.specialNPC)
+        {
+            npc.trustManager.GainTrust(20F);
+        }
         if (npc.incorrectInfo)
         {
-            trustManager.LoseTrust(20f);
+            
             if (npc.virusNPC)
             {
                 acceptedIncorrectVirusNPC();
+            }
+            else
+            {
+                acceptedIncorrectNonVirusNPC();
             }
         }
         else
@@ -68,8 +74,9 @@ public class ApprovedState : State<NPCStateMachine.NPCState>
 
     public void acceptedIncorrectVirusNPC()
     {
-        trustManager.LoseTrust(50f);
-        Debug.Log(trustManager.trustAmount);
+        npc.trustManager.LoseTrust(40f);
+
+        //Debug.Log(trustManager.trustAmount);
 
         Debug.Log("Approved Losing More Points-----------Virus");
 
@@ -78,16 +85,22 @@ public class ApprovedState : State<NPCStateMachine.NPCState>
 
     public void acceptedCorrectVirusNPC()
     {
-        trustManager.LoseTrust(30f);
-        Debug.Log(trustManager.trustAmount);
+        npc.trustManager.LoseTrust(20f);
+        Debug.Log(npc.trustManager.trustAmount);
 
         Debug.Log("Approved Losing More Points-----------Virus");
         npc.firstChoice = false;
     }
+    public void acceptedIncorrectNonVirusNPC()
+    {
+        npc.trustManager.LoseTrust(10f);
+        Debug.Log(npc.trustManager.trustAmount);
+    }
 
     public void acceptedCorrectNonVirusNPC()
     {
-        trustManager.GainTrust(50f);
-        Debug.Log(trustManager.trustAmount);
+        npc.trustManager.GainTrust(10f);
+        Debug.Log(npc.trustManager.trustAmount);
     }
+   
 }

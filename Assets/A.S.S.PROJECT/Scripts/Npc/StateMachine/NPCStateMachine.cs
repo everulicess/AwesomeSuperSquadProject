@@ -34,6 +34,9 @@ public class NPCStateMachine : StateController<NPCStateMachine.NPCState>
     public Dialogue dialogue;
     //Spawner
     public WaveSpawner spawn;
+
+    //trust points
+    public TrustManager trustManager;
     public enum NPCState
     {
         WalkingState,
@@ -50,6 +53,8 @@ public class NPCStateMachine : StateController<NPCStateMachine.NPCState>
         target = WayPoints.points[wavePointIndex];
         spawn = GameObject.FindGameObjectWithTag("Spawn").GetComponent<WaveSpawner>();
         sd = GameObject.FindObjectOfType<SpawnDialogue>();
+        trustManager = GameObject.FindObjectOfType<TrustManager>();
+
 
         States[NPCState.WalkingState] = new WalkingState(this);
         States[NPCState.Scanning] = new ScanningState(this);
