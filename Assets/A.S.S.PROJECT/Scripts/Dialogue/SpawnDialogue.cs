@@ -17,6 +17,7 @@ public class SpawnDialogue : MonoBehaviour
         Debug.Log("Spawn Textbox");
         DialogueManager.instance.hasTextPrefab = true;
         CreateDialogue();
+        TriggerDialogue();
         /*DialogueManager.instance.checkForDialogue();*/
 /*        GameObject dialogueManager = GameObject.Find("DialogueManager");
         DialogueManager dm = dialogueManager.GetComponent<DialogueManager>();
