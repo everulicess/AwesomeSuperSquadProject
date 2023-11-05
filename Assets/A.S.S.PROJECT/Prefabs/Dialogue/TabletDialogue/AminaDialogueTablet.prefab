@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 2739479222911953702}
   - component: {fileID: 2403816150694265390}
   m_Layer: 5
-  m_Name: LarsDialogueTablet
+  m_Name: AminaDialogueTablet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -267,12 +267,12 @@ MonoBehaviour:
   continueButton: {fileID: 4038524267232197815}
   dialogue:
     sentences:
-    - Goedendag, my name is Lars Jansen
-    - I have done a virtual job application on a job in Greenland and the company
-      has given me the job.
-    - They must have hired me because of my renewable energy expertise and leadership
-      qualities
-    - The company has arranged a work visa for me
+    - "Hy\u0101l\u014D m\u0101nu\u1E63a, I am Amina Al-Mansoori from Bangladesh"
+    - My Bangladeshis roots have taught me to survive in hostile enviroments and
+      will always strike back
+    - My main profession is engeniring bionical organs, which makes me a very wanted
+      in hospitals
+    - Now if you would allow me to pass through, I can make Greenland better
 --- !u!1 &3563557083084880888
 GameObject:
   m_ObjectHideFlags: 0
