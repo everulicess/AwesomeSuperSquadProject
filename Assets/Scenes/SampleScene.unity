@@ -20508,8 +20508,8 @@ MonoBehaviour:
   firstScan: 0
   decisionMade: 0
   tutorialPart_1: {fileID: 552841250}
-  tutorialPart_2: {fileID: 565041851}
-  tutorialPart_3: {fileID: 1541728677}
+  tutorialPart_2: {fileID: 1541728677}
+  tutorialPart_3: {fileID: 565041851}
   tutorialPart_4: {fileID: 1443488628}
   tutorialPart_5: {fileID: 817130486}
   tutorialPart_6: {fileID: 1217165815}
