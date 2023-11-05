@@ -55,6 +55,7 @@ public class Tutorial : State<GameManager.GameState>
             case TutorialStates.TutotialPart1:
                 //hide panels and change the booleans
                 gM.tutorialPart_1.SetActive(true);
+                gM.tutorialPart_6.SetActive(false);
                 if (gM.tabletpicked)
                 {
                     gM.tutorialPart_1.SetActive(false);
