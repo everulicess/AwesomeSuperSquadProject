@@ -267,7 +267,7 @@ MonoBehaviour:
   continueButton: {fileID: 4038524267232197815}
   dialogue:
     sentences:
-    - "!\u0648\u0642\u062A \u0637\u0648\u064A\u0644 \u0644\u0627 \u0631\u0624\u064A\u0629"
+    - '!waqt tawil la ruya'
     - I don't believe we have met before! My name is Rachid
     - "If it\u2019s not too much trouble, could you please lend me a hand?"
     - Abdul must have asked you to help me cross the border, I would be grateful
