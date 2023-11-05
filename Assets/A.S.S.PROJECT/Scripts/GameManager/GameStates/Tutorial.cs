@@ -66,7 +66,7 @@ public class Tutorial : State<GameManager.GameState>
             case TutorialStates.TutotialPart2:
                 //hide panels and change the booleans
                 gM.tutorialPart_2.SetActive(true);
-                if (gM.scannerpicked)
+                if (gM.requirementsClicked)
                 {
                     gM.tutorialPart_2.SetActive(false);
                     TutState = TutorialStates.TutotialPart3;
@@ -79,7 +79,7 @@ public class Tutorial : State<GameManager.GameState>
                 gM.tutorialPart_3.SetActive(true);
                 Debug.Log("requirements Tutorial is active");
                 //change bool when requirements cicked
-                if (gM.requirementsClicked)
+                if (gM.scannerpicked)
                 {
                     Debug.Log("requirements Tutorial is inactive");
 
@@ -102,7 +102,7 @@ public class Tutorial : State<GameManager.GameState>
                 }
                 break;
             //show the info panel and how it works
-            //show how to make decisions
+            
             case TutorialStates.TutotialPart5:
                 //Hide Panels
                 gM.tutorialPart_5.SetActive(true);
@@ -110,14 +110,15 @@ public class Tutorial : State<GameManager.GameState>
                 if (gM.decisionMade)
                 {
                     gM.tutorialPart_5.SetActive(false);
-                    gM.tutorialPart_6.SetActive(false);
+                    //gM.tutorialPart_6.SetActive(false);
                     TutState = TutorialStates.TutotialPart6;
                 }
                 break;
             
             case TutorialStates.TutotialPart6:
-                //Hide Panels
-                
+                //Hide Panels 
+                //show how to make decisions
+
                 //change tutorial finished boolean on the buttons
 
                 break;
