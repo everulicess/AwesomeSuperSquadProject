@@ -138,5 +138,7 @@ public class Tutorial : State<GameManager.GameState>
         gM.tutorialPart_3.SetActive(false);
         gM.tutorialPart_4.SetActive(false);
         gM.tutorialPart_5.SetActive(false);
+        gM.tutorialPart_6.SetActive(false);
+        gM.tutorialPart_7.SetActive(false);
     }
 }
