@@ -40,6 +40,7 @@ public class ScanningState : State<NPCStateMachine.NPCState>
 
     public override void UpdateState()
     {
+        npc.transform.rotation = Quaternion.Euler(npc.transform.rotation.x, 0f, npc.transform.rotation.z);
         Debug.Log("SCANNING STATE");
         //if (scanned)
         {

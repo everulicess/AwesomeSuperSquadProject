@@ -33,7 +33,7 @@ public class WalkingState : State<NPCStateMachine.NPCState>
         Debug.Log("WALKING STATE");
         Vector3 dir = npc.target.position - npc.transform.position;
         npc.transform.Translate(dir.normalized * npc.speed * Time.deltaTime, Space.World);
-
+        npc.transform.rotation = Quaternion.Euler(npc.transform.rotation.x,npc.transform.rotation.y - 90f,npc.transform.rotation.z);
         if (Vector3.Distance(npc.transform.position, npc.target.position) <= 0.2f)
         {
             GetNextWayPoint();

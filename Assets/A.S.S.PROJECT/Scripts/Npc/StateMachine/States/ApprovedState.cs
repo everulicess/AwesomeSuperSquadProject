@@ -59,6 +59,8 @@ public class ApprovedState : State<NPCStateMachine.NPCState>
 
     public override void UpdateState()
     {
+        npc.transform.rotation = Quaternion.Euler(npc.transform.rotation.x, -90f, npc.transform.rotation.z);
+
         if (!npc.virusNPC)
         {
             Debug.Log("APPROVED STATE");

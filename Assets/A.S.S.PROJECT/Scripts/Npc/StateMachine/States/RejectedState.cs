@@ -12,6 +12,7 @@ public class RejectedState : State<NPCStateMachine.NPCState>
 
     public override void EnterState()
     {
+        npc.transform.rotation = Quaternion.Euler(npc.transform.rotation.x, 135f, npc.transform.rotation.z);
         if (npc.specialNPC)
         {
             npc.trustManager.LoseTrust(10);
