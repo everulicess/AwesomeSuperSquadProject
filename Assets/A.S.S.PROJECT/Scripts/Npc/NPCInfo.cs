@@ -14,7 +14,7 @@ public struct NpcIDInfo
     public string antivirus;
     public override string ToString()
     {
-        return $"name: {name}\n age: {age}\n ID: {idNumber}\n nationality: {nationality}\n\n antivirus: {antivirus}";
+        return $"Name:\n {name}\n Age:\n {age}\n ID:\n {idNumber}\n Nationality:\n {nationality}\n Antivirus:\n {antivirus}";
     }
 }
 [Serializable]
@@ -29,7 +29,7 @@ public struct NpcVisaInfo
     public string antivirus;
     public override string ToString()
     {
-        return $"reason: {reason}\n name {name}\n age: {age}\n ID: {idNumber}\n nationality: {nationality}\n\n antivirus: {antivirus}";
+        return $"Reason:\n {reason}\n Name:\n {name}\n Age:\n {age}\n ID:\n {idNumber}\n Nationality:\n {nationality}\n antivirus:\n {antivirus}";
     }
 }
 public class NPCInfo : MonoBehaviour

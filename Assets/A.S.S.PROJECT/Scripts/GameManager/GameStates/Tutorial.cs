@@ -41,6 +41,8 @@ public class Tutorial : State<GameManager.GameState>
         
         if (gM.tutorialfinished)
         {
+            Debug.LogError("FINISHEEEEEEDDD TUTOOOORIAAAAAALL");
+            gM.tutorialPart_7.SetActive(false);
             return GameManager.GameState.Day;
         }
         return GameManager.GameState.Tutorial;

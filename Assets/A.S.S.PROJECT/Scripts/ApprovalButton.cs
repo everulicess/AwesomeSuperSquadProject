@@ -19,6 +19,7 @@ public class ApprovalButton : MonoBehaviour
             GameObject.FindGameObjectWithTag("NPC").GetComponent<NPCStateMachine>().approved = true;
             microchipscanner.hasDecided = true;
             gM.decisionMade = true;
+            gM.tutorialfinished = true;
             Debug.Log("ACCEPTED");
         }
         
@@ -31,6 +32,7 @@ public class ApprovalButton : MonoBehaviour
             microchipscanner.hasDecided = true;
             gM.decisionMade = true;
             Debug.Log("REJECTED");
+            gM.tutorialfinished = true;
         }
         
     }
@@ -41,6 +43,7 @@ public class ApprovalButton : MonoBehaviour
             GameObject.FindGameObjectWithTag("NPC").GetComponent<NPCStateMachine>().detained = true;
             microchipscanner.hasDecided = true;
             Debug.Log("DETAINED");
+            gM.tutorialfinished = true;
         }
        
     }

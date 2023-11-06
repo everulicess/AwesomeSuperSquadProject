@@ -62,7 +62,7 @@ public class DetainedState : State<NPCStateMachine.NPCState>
 
     public override void UpdateState()
     {
-        npc.transform.rotation = Quaternion.Euler(npc.transform.rotation.x, 180f, npc.transform.rotation.z);
+        npc.transform.rotation = Quaternion.Euler(npc.transform.rotation.x, 225f, npc.transform.rotation.z);
 
         Vector3 dir = npc.target.position  - npc.transform.position;
         npc.wavePointIndex = 4;

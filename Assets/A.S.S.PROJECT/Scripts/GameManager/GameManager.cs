@@ -40,14 +40,14 @@ public class GameManager : StateController<GameManager.GameState>
     }
     public void MenuHandle()
     {
-        if (isMenu)
-        {
-            Time.timeScale = 0;
-        }
-        else
-        {
-            Time.timeScale = 1;
-        }
+        //if (isMenu)
+        //{
+        //    Time.timeScale = 0.01f;
+        //}
+        //else
+        //{
+        //    Time.timeScale = 1;
+        //}
     }
     
 }
