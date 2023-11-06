@@ -32946,7 +32946,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -66, y: -66}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &1956172077203085783
 MeshRenderer:
@@ -33188,7 +33188,7 @@ MonoBehaviour:
       need. A skill requirement is mandatory in order to enter Greenland.
     - To the right of the [dissolutionWindow], the BiScanner V2.87 has been positioned.
       This scanner will be used to scan the BiChips, which the climate immigrants
-      wil be are wearing.
+      will be wearing.
     - 'When the climate immigrant has been scanned, use the BiDentificator Tablet
       V4 Beta. Identify skill requirements and compare the [idValues]. If there is
       a divergency between [idValues], reject the climate immigrant. '
@@ -33399,8 +33399,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 256
-  m_fontSizeBase: 256
+  m_fontSize: 192
+  m_fontSizeBase: 192
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -33435,7 +33435,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 100, y: 100, z: 100, w: 100}
+  m_margin: {x: 100, y: 100, z: 362.13196, w: 100}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
