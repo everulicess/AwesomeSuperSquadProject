@@ -9,6 +9,7 @@ public class RequirementsCanvas : MonoBehaviour
     [SerializeField] GameObject background;
     [SerializeField] GameObject requirementList;
     [SerializeField] GameObject warningObject;
+    [SerializeField] GameObject biohazard;
 
     [SerializeField] GameObject warningButton;
 
@@ -30,6 +31,7 @@ public class RequirementsCanvas : MonoBehaviour
         requirementList.SetActive(true);
         warningObject.SetActive(false);
         warningButton.SetActive(warningactivated);
+        biohazard.SetActive(false);
         //if (!warningactivated)
         //{
         //    warningButton.SetActive(false);
@@ -38,7 +40,7 @@ public class RequirementsCanvas : MonoBehaviour
         //{
         //    warningButton.SetActive(true);
         //}
-        
+
     }
     
 
@@ -47,6 +49,7 @@ public class RequirementsCanvas : MonoBehaviour
         exclamationObject.SetActive(true);
         background.SetActive(false);
         requirementList.SetActive(false);
+        biohazard.SetActive(false);
     }
     public void OnVirusClicked()
     {
@@ -55,5 +58,6 @@ public class RequirementsCanvas : MonoBehaviour
         warningObject.SetActive(true);
         exclamationObject.SetActive(false);
         requirementList.SetActive(false);
+        biohazard.SetActive(true);
     }
 }
