@@ -15,8 +15,18 @@ public class PickUpCheck : MonoBehaviour
     {
         if (other.gameObject.name == "Right Controller" || other.gameObject.name == "Left Controller")
         {
-            gM.tabletpicked = true;
-            //Debug.Log($"{other.gameObject.name}----------------------------------------------------------");
+            if (this.gameObject.name == "DialogueTablet")
+            {
+                gM.tabletpicked = true;
+                Debug.Log($"{gM.tabletpicked}-------------tablet---------------------------------------------");
+
+            }
+            else if (this.gameObject.name =="Tablet")
+            {
+                gM.infoTabletPicked = true;
+                Debug.Log($"{gM.infoTabletPicked}-------------info tablet---------------------------------------------");
+
+            }
 
         }
     }

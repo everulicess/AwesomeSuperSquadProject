@@ -267,7 +267,7 @@ MonoBehaviour:
   continueButton: {fileID: 4038524267232197815}
   dialogue:
     sentences:
-    - Goodday, my name is Lars Jansen
+    - Goedendag, my name is Lars Jansen
     - I have done a virtual job application on a job in Greenland and the company
       has given me the job.
     - They must have hired me because of my renewable energy expertise and leadership

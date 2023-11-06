@@ -107,7 +107,7 @@ public class Tutorial : State<GameManager.GameState>
                 //Hide Panels
                 gM.tutorialPart_5.SetActive(true);
                 gM.tutorialPart_6.SetActive(true);
-                if (gM.decisionMade)
+                if (gM.infoTabletPicked)
                 {
                     gM.tutorialPart_5.SetActive(false);
                     //gM.tutorialPart_6.SetActive(false);
@@ -117,8 +117,12 @@ public class Tutorial : State<GameManager.GameState>
             
             case TutorialStates.TutotialPart6:
                 //Hide Panels 
+                gM.tutorialPart_7.SetActive(true);
                 //show how to make decisions
-
+                if (gM.tutorialfinished)
+                {
+                    gM.tutorialPart_7.SetActive(false);
+                }
                 //change tutorial finished boolean on the buttons
 
                 break;

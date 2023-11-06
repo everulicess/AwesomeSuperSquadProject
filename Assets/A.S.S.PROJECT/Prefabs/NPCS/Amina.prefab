@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2762933224335113610}
   - component: {fileID: 6644743220391815957}
   - component: {fileID: 1322513576043012977}
+  - component: {fileID: 6597122402760778414}
   m_Layer: 0
   m_Name: Amina
   m_TagString: NPC
@@ -54,8 +55,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.2385874, y: 2, z: 2}
-  m_Center: {x: -0.09499407, y: 1, z: 0}
+  m_Size: {x: 1.2955347, y: 2.2208786, z: 2}
+  m_Center: {x: -0.028556162, y: 5.5334773, z: 0}
 --- !u!114 &6644743220391815957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +113,23 @@ MonoBehaviour:
     sentences: []
   spawn: {fileID: 0}
   trustManager: {fileID: 0}
+--- !u!114 &6597122402760778414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5727521783464023859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6397cf5c45cceff4e9d4134ca98a1071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialoguePrefab: {fileID: 2305002389385135379, guid: 061ae0e51c16df8439bb7531ef8339f2, type: 3}
+  dialogue:
+    sentences:
+    - This does not work. If you want to change the text of this dialogue, you will
+      have to adjust the text in the [Dialogue Prefab] itself.
 --- !u!1001 &1962529220074726873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -142,7 +160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e24f7e2cbe2be84cbb701f84caf3965, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.6
+      value: 5.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e24f7e2cbe2be84cbb701f84caf3965, type: 3}
       propertyPath: m_LocalPosition.z
