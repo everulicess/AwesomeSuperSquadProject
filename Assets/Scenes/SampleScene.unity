@@ -3356,6 +3356,7 @@ GameObject:
   - component: {fileID: 367112897}
   - component: {fileID: 367112896}
   - component: {fileID: 367112898}
+  - component: {fileID: 367112899}
   m_Layer: 6
   m_Name: XR Origin (XR Rig)
   m_TagString: Untagged
@@ -3666,8 +3667,24 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: -6131295136447488360, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  rightRay: {fileID: 775030065}
-  leftRay: {fileID: 1032039850}
+  rightRay: {fileID: 393253763}
+  leftRay: {fileID: 1137481506}
+--- !u!114 &367112899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367112887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ed837603de99fa429c127ca473b5b5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightGrabRay: {fileID: 393253758}
+  leftGrabRay: {fileID: 1137481501}
+  rightDirectGrab: {fileID: 1413779602}
+  leftDirectGrab: {fileID: 1664204213}
 --- !u!1001 &375329789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12941,7 +12958,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1073477382}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
