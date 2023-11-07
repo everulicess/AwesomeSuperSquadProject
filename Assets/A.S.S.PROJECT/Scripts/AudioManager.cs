@@ -6,15 +6,17 @@ public class AudioManager : MonoBehaviour
 {
     public AudioSource buttonPress;
     public AudioSource scannerBeep;
+    public AudioClip buttonPressClip;
+    public AudioClip scannerBeepClip;
 
     public void PlayButtonPress()
     {
-        buttonPress.Play();
+        buttonPress.PlayOneShot(buttonPressClip);
     }
 
     public void PlayScannerBeep()
     {
-        scannerBeep.Play();
+        scannerBeep.PlayOneShot(scannerBeepClip);
     }
 
 }
