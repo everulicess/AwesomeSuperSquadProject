@@ -37,6 +37,9 @@ public class NPCStateMachine : StateController<NPCStateMachine.NPCState>
 
     //trust points
     public TrustManager trustManager;
+
+    //audio
+    public AudioManager aM;
     public enum NPCState
     {
         WalkingState,
@@ -49,7 +52,7 @@ public class NPCStateMachine : StateController<NPCStateMachine.NPCState>
 
     private void Awake()
     {
-        
+        aM = GameObject.FindObjectOfType<AudioManager>();
         target = WayPoints.points[wavePointIndex];
         spawn = GameObject.FindGameObjectWithTag("Spawn").GetComponent<WaveSpawner>();
         sd = GameObject.FindObjectOfType<SpawnDialogue>();

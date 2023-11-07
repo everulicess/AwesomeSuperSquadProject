@@ -5,6 +5,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public AudioSource buttonPress;
+    public AudioSource scannerBeep;
 
     public void PlayButtonPress()
     {
@@ -13,7 +14,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlayScannerBeep()
     {
-        buttonPress.Play();
+        scannerBeep.Play();
     }
 
 }

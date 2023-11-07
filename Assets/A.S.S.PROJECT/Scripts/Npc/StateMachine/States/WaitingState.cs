@@ -14,12 +14,14 @@ public class WaitingState : State<NPCStateMachine.NPCState>
     {
         Debug.LogError("Spawning TextBox");
         npc.sd.CreateDialogue();
+        npc.aM.PlayScannerBeep();
         //Debug.LogError("Trigger TextBox");
         //npc.sd.TriggerDialogue();
     }
 
     public override void ExitState()
     {
+        npc.aM.PlayButtonPress();
         DialogueManager.instance.EndDialogue();
     }
 
